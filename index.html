@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Make sure your page supports utf-8 characterset. -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Load TensorFlow.js. This is required to use the qna model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+<!-- Load the qna model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script>
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="loader"></div>
+    <section>
+    <div class="container">
+        <h1>Text Processing Tool</h1>
+            <label for="hugeText">Context:</label>
+            <textarea id="hugeText" rows="15" cols="50" placeholder="Enter your Context"></textarea>
+            <label>
+                Upload your file:
+                <input type="file" id="file-upload">
+              </label>
+            <label for="question">Question:</label>
+            <input type="text" id="question" placeholder="Enter question text here...">
+            
+            <button type="submit" id="submit">Submit</button>
+
+        <div id="resultContainer">
+            <h2>Results:</h2>
+            <p id="results"></p>
+        </div>
+    </div>
+    </section>
+    <!-- Place your code in the script tag below. You can also use an external .js file -->
+<script src="main.js"> </script>
+</body>
+</html>
